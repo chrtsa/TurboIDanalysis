@@ -1,4 +1,4 @@
-Package: TurboID_analysis
+Package: TurboIDanalysis
 Type: Package
 Title: Tools to analyse proteomics data using a ratiometric approach
 Version: 0.1.0
