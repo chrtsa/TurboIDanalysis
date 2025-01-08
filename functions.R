@@ -30,7 +30,7 @@ TP_FP <- function(data, sample, TP, FP, gene_name, ratio, TP_flag) {
   #Calculating TPR and FPR
   x <- 1
   for (i in 1:nrow(data)) {
-    if (!is.na(data[[TP_flag]][i]) && data$[[TP_flag]][i] == 1) {
+    if (!is.na(data[[TP_flag]][i]) && data[[TP_flag]][i] == 1) {
       data$TPR[i] <- x / sumTP
       x <- x + 1
     } else {
