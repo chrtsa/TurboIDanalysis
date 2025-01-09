@@ -9,6 +9,6 @@ License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports: dplyr, ggplot2
-Suggests: knitr, rmarkdown, Roxygen2
+Suggests: knitr, rmarkdown, roxygen2
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
