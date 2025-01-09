@@ -2,14 +2,13 @@ Package: TurboIDanalysis
 Type: Package
 Title: Tools to analyse proteomics data using a ratiometric approach
 Version: 0.1.0
-Date: 2025-01-07
 Author: Christina Tsagkogianni
 Maintainer: Christina Tsagkogianni <christina.tsagkogianni.2@ki.se>
 Description: A package that contains functions to create the ROC curves from Cho et al., 2020 (Nat Protoc).
-License: MIT license
+License: MIT 
 Encoding: UTF-8
 LazyData: true
-Imports: tidyverse, Roxygen2
-Suggests: knitr, rmarkdown
+Imports: dplyr, ggplot2
+Suggests: knitr, rmarkdown, Roxygen2
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
