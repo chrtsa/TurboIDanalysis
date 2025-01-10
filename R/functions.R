@@ -61,8 +61,8 @@ flag <- function(data, sample, TP, FP = "FP", gene_name = "gene_name", ratio, TP
 #' @export
 roc <- function(data, FPR = "FPR", TPR = "TPR", title = "ROC Curve", col1 = "#002C34", col2 = "#4F0433") {
   p <- ggplot(data = data, aes(x = FPR, y = TPR)) +
-    geom_point(color1, shape = 19, size = 1) +
-    geom_abline(intercept = 0, slope = 1, color2) +
+    geom_point(color = col1, shape = 19, size = 1) +
+    geom_abline(intercept = 0, slope = 1, color = col2) +
     xlab("FPR") +
     ylab("TPR") +
     labs(title = title) +
