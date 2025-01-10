@@ -1,10 +1,10 @@
 Package: TurboIDanalysis
 Type: Package
-Title: Tools to analyse proteomics data using a ratiometric approach
+Title: Ratiometric analysis tools for proximity-based labelling applications
 Version: 0.1.0
 Author: Christina Tsagkogianni
 Maintainer: Christina Tsagkogianni <christina.tsagkogianni.2@ki.se>
-Description: A package that contains functions to create the ROC curves from Cho et al., 2020 (Nat Protoc).
+Description: This package contains functions that calculate the True Positive and False Positive rates of a proximity-based labelling experiment, such as TurboID, based on user-provided true and false positive lists. The package also provides basic visualisation features to assist in the interpretation of the results.
 License: MIT 
 Encoding: UTF-8
 LazyData: true
