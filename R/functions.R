@@ -83,7 +83,7 @@ roc <- function(data, FPR = "FPR", TPR = "TPR", title = "ROC Curve", col1 = "#00
 #' @export
 opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title = "Optimal cutoff") {
   #Constructing column names
-  norm_col <- paste0(sample, "_FP")
+  norm_col <- paste0(sample, "_FP_norm")
   log_col <- paste0("log2_", sample)
   max_col <- paste0("max_", sample)
   tpr_fpr <- "TPR-FPR"
