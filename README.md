@@ -9,6 +9,7 @@ A package that contains functions to create the ROC curves following the data an
 ### Main functions
 - flag() - Flags each protein as either a true or false positive, based on the user-provided lists, and calculates the True Positive and False Positive Rates.
 - roc() - Creates the ROC curve based on the TPR and FPR calculated by the previous function.
+- opt_cutoff()- Plots TPR-FPR against the log2 fold change of the protein measurements to determine the optimal cutoff value
 
 ## Installation
 
