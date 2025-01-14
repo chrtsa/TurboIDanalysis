@@ -88,7 +88,7 @@ opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title =
   max_col <- paste0("max_", sample)
   tpr_fpr <- "TPR-FPR"
   if (!norm_col %in% names(data)) {
-    stop("Column '", norm_col, "' does not exist in the dataset. Please ensure the flag() function has been run, and that values have been normalised and TPR and FPR have been calculated.")
+    stop("Column '", norm_col, "' does not exist in the dataset. Please ensure the flag() function has been run, and that the sample name matches the sample name given.")
   }
   data <- data %>%
     mutate(!!log_col := log2(as.numeric(.[[norm_col]])), 
