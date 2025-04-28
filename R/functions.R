@@ -91,9 +91,9 @@ opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title =
     stop("Column '", norm_col, "' does not exist in the dataset. Please ensure the flag() function has been run, and that the sample name matches the sample name given.")
   }
   data <- data %>%
-  rowwise() %>%
-    mutate(!!log_col := log2(as.numeric(.[[norm_col]])), 
-           !!tpr_fpr := TPR - FPR)
+    mutate(
+      !!log_col := log2(as.numeric(.data[[norm_col]])), 
+      !!tpr_fpr := TPR - FPR)
   max_col <- max(data[[tpr_fpr]], na.rm = TRUE)
   xintersect <- data[[log_col]][data[[tpr_fpr]] == max_col]
   xintersect <- xintersect[1] #takes the first in case there are multiple. This might not be ideal and I might need to manually pick the peak instead.
