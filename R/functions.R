@@ -91,6 +91,7 @@ opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title =
     stop("Column '", norm_col, "' does not exist in the dataset. Please ensure the flag() function has been run, and that the sample name matches the sample name given.")
   }
   data <- data %>%
+  rowwise() %>%
     mutate(!!log_col := log2(as.numeric(.[[norm_col]])), 
            !!tpr_fpr := TPR - FPR)
   max_col <- max(data[[tpr_fpr]], na.rm = TRUE)
