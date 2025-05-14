@@ -98,12 +98,14 @@ opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title =
   max_col <- max(data[[tpr_fpr]], na.rm = TRUE)
   xintersect <- data[[log_col]][data[[tpr_fpr]] == max_col]
   xintersect <- xintersect[1] #takes the first in case there are multiple. This might not be ideal and I might need to manually pick the peak instead.
-  y_position <- max(data[[tpr_fpr]], na.rm = TRUE) * 1.3 #arranges where the label will be on the graph
+  y_position <- max(data[[tpr_fpr]], na.rm = TRUE) * 0.95 #arranges where the label will be on the graph
+  offset_x <- 0.1 # Move label slightly to the right
+  offset_y <- 0.2 # Move the label higher
   p <- ggplot(data, aes(x = !!sym(log_col), y = !!sym(tpr_fpr))) +
     geom_point(color = col1, shape = 19, size = 0.5) + 
     geom_vline(xintercept = xintersect, color = col2) +
-    annotate("text", x = xintersect, y = y_position, label = round(xintersect, 2), 
-             vjust = -0.5, color = col2, angle = 0, size = 4) +
+    annotate("text", x = xintersect + offset_x, y = y_position + offset_y, label = round(xintersect, 2), 
+             vjust = -0.5, color = col2, angle = 0, size = 5) +
     xlab(log_col) +
     ylab("TPR-FPR") +
     labs(x = log_col, y = tpr_fpr, title = title) +
