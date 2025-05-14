@@ -98,7 +98,7 @@ opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title =
   max_col <- max(data[[tpr_fpr]], na.rm = TRUE)
   xintersect <- data[[log_col]][data[[tpr_fpr]] == max_col]
   xintersect <- xintersect[1] #takes the first in case there are multiple. This might not be ideal and I might need to manually pick the peak instead.
-  y_position <- max(data[[tpr_fpr]], na.rm = TRUE) * 0.95 #arranges where the label will be on the graph
+  y_position <- max(data[[tpr_fpr]], na.rm = TRUE) * 1.3 #arranges where the label will be on the graph
   p <- ggplot(data, aes(x = !!sym(log_col), y = !!sym(tpr_fpr))) +
     geom_point(color = col1, shape = 19, size = 0.5) + 
     geom_vline(xintercept = xintersect, color = col2) +
