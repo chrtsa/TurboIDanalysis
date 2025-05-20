@@ -4,13 +4,11 @@
 cff-version: 1.2.0
 title: Turbo ID data analysis
 message: >-
-  If you use this software, please cite it using the
-  metadata from this file.
+  Citation info
 type: software
 authors:
   - given-names: Christina
     family-names: Tsagkogianni
-    name-particle: Christina
     email: christina.tsagkogianni.2@ki.se
     affiliation: Karolinska Institutet
     orcid: 'https://orcid.org/0009-0003-7492-8442'
