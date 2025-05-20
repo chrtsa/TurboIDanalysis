@@ -1,0 +1,18 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Turbo ID data analysis
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Christina
+    family-names: Tsagkogianni
+    name-particle: Christina
+    email: christina.tsagkogianni.2@ki.se
+    affiliation: Karolinska Institutet
+    orcid: 'https://orcid.org/0009-0003-7492-8442'
+repository-code: 'https://github.com/chrtsa/TurboIDanalysis'
+license: MIT
