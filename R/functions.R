@@ -81,26 +81,6 @@ roc <- function(data, FPR = "FPR", TPR = "TPR", title = "ROC Curve", col1 = "#00
 #' @param title The title of the graph (optional).
 #' @return A ggplot2 object showing the graph to calculate the optimal cutoff.
 #' @export
-opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title = "Optimal cutoff") {
-  #Constructing column names
-  norm_col <- paste0(sample, "_FP_norm")
-  log_col <- paste0("log2_", sample)
-  max_col <- paste0("max_", sample)
-  tpr_fpr <- "TPR-FPR"
-  if (!norm_col %in% names(data)) {
-    stop("Column '", norm_col, "' does not exist in the dataset. Please ensure the flag() function has been run, and that the sample name matches the sample name given.")
-  }
-  data <- data %>%
-  rowwise() %>%
-    mutate(
-      !!log_col := log2(as.numeric(.data[[norm_col]])), 
-      !!tpr_fpr := TPR - FPR)
-  max_col <- max(data[[tpr_fpr]], na.rm = TRUE)
-  xintersect <- data[[log_col]][data[[tpr_fpr]] == max_col]
-  xintersect <- xintersect[1] #takes the first in case there are multiple. This might not be ideal and I might need to manually pick the peak instead.
-  y_position <- max(data[[tpr_fpr]], na.rm = TRUE) * 0.95 #arranges where the label will be on the graph
-  offset_x <- 0.1 # Move label slightly to the right
-  offset_y <- 0.2 # Move the label higher
  opt_cutoff <- function(data, sample, col1 = "#002C34", col2 = "#4F0433", title = "Optimal cutoff") {
   #Constructing column names
   norm_col <- paste0(sample, "_FP_norm")
